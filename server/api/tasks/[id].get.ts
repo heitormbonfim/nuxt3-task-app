@@ -2,10 +2,7 @@ import { eq } from "drizzle-orm";
 import { z } from "zod";
 import db from "~/lib/db";
 import { tasks } from "~/lib/db/schema";
-
-const IdParamsSchema = z.object({
-	id: z.coerce.number(),
-});
+import { IdParamsSchema } from "../../../lib/utils/constants";
 
 export default defineEventHandler(async (event) => {
 	const result = await getValidatedRouterParams(event, IdParamsSchema.safeParse);
