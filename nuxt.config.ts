@@ -1,26 +1,19 @@
+import "./lib/env";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    "@nuxt/content",
-    "@nuxt/eslint",
-    "@nuxt/image",
-    "@nuxt/scripts",
-    "@nuxt/test-utils",
-    "@nuxt/ui",
-  ],
-  devtools: { enabled: true },
-  compatibilityDate: "2025-07-15",
-
-  css: ["@picocss/pico"],
-
-  eslint: {
-    config: {
-      stylistic: {
-        semi: true,
-        quotes: "double",
-        commaDangle: "always-multiline",
-        indent: "tab",
-      },
-    },
-  },
+	modules: ["@nuxt/eslint"],
+	devtools: { enabled: true },
+	css: ["@picocss/pico"],
+	compatibilityDate: "2024-11-01",
+	eslint: {
+		config: {
+			stylistic: {
+				semi: true,
+				quotes: "double",
+				commaDangle: "always-multiline",
+				indent: "tab",
+			},
+		},
+	},
 });
